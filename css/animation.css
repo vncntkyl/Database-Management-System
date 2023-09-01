@@ -1,0 +1,57 @@
+@keyframes float {
+    50%{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes float-rev {
+    50%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes show{
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes sideways {
+    from{
+        transform: translateX(-10px);
+    }
+    to{
+        transform: translateX(10px);
+    }
+}
+.float{
+    opacity: 0;
+    animation: float 1s ease-in-out 0s 1 forwards !important;
+}
+.float-delay{
+    opacity: 0;
+    animation: float 1s ease-in-out .2s 1 forwards !important;
+}
+.float-reverse{
+    opacity: 0;
+    animation: float-rev 1s ease-in-out 0s 1 forwards !important;
+}
+.float-reverse-delay{
+    opacity: 0;
+    animation: float-rev 1s ease-in-out 0.2s 1 forwards !important;
+}
+.show{
+    opacity: 0;
+    animation: show 2s ease-in-out 0s 1 forwards;
+}
+.float-sideways{
+    opacity: 0;
+    animation: float 1s ease-in-out 0s 1 forwards, sideways 1s ease-in-out 2s infinite alternate forwards;
+}

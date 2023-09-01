@@ -1,0 +1,197 @@
+.confirm-message, .success-message{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 3px solid var(--clr-black-light);
+    border-radius: 15px;
+    z-index: 20;
+    background-color: var(--clr-black-light);
+    width: 500px;
+    max-width: 80%;
+    overflow: hidden;
+}
+
+.confirm-message.active, .success-message.active{
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.confirm-header, .success-header{
+    margin: 0;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--clr-main);
+    background-color: var(--clr-black-light);
+}
+
+.confirm-header .close-button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    width: fit-content;
+}
+.confirm-header .close-button:hover{
+    background-color: unset;
+    color: var(--clr-main-darker);
+}
+.confirm-body{
+    padding: 10px 15px;
+    text-align: center;
+    background-color: white;
+}
+.confirm-body .c-message{
+    margin: 1rem;
+}
+.confirm-message button{
+    padding: 5px;
+    cursor: pointer;
+    color: var(--clr-main-light);
+    background-color: var(--clr-black-light);
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    font-family: var(--font-main);
+    font-size: 1rem;
+}
+.confirm-message button:hover{
+    background-color: var(--clr-main-darker);
+}
+#overlay{
+    transition: 200ms ease-in-out;
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 12;
+    pointer-events: none;
+}
+#overlay{
+    transition: 200ms ease-in-out;
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 12;
+    pointer-events: none;
+}
+.success-message{
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.success-header{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.success-message .message{
+    font-size: 1.2rem;
+    background-color: white;
+    padding-top: 2rem;
+    text-align: center;
+    height: 150px;
+    width: 600px;
+}
+
+#overlay.active{
+    pointer-events: all;
+    opacity: 1;
+}
+.confirm-message.form{
+    top: 0;
+    left: 70%;
+    transform: translate(-40%,-35%) scale(0);
+}
+.confirm-message.form.active{
+    transform: translate(-130%,70%) scale(1);
+}
+.confirm-message.form.equipment-form.active{
+    transform: translate(-90%,13%) scale(1);
+}
+form.form-modal{
+    align-items: center;
+}
+form.form-modal .submit{
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 150px;
+}
+form.form-modal .input{
+    width: 200px;
+    margin-top: 0.5rem;
+}
+form.form-modal select{
+    height: 35px;
+    border: none;
+    border-bottom: 2px solid var(--clr-main);
+    outline: none;
+    padding: 5px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+}
+.no-width{
+    width: max-content;
+}
+.form-add{
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: white;
+    padding: 0;
+    margin: 1rem auto;
+    width: max-content;
+    z-index: 10;
+}
+
+.form-add *{
+    gap: 1rem;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    margin-bottom: 0;
+    z-index: 10;
+}
+.form-add label{
+    text-decoration: underline 3px solid var(--clr-main);
+}
+.form-add input, .form-add select, .form-add textarea{
+    height: 50px;
+    padding: 0 1rem;
+    border: 1px solid var(--clr-black-light);
+    background-color: white;
+    width: 300px;
+}
+.form-add .submit{
+    background-color: var(--clr-main-light);
+    border: unset;
+}
+.form-add .submit:hover{
+    background-color: var(--clr-main);
+}
+.form-add textarea{
+    width: calc(900px + 2rem);
+    height: 200px;
+    margin-bottom: 1rem;
+    resize: none;
+    outline: none;
+    padding: 0.5rem;
+}
+.form-add .input-cont{
+    align-items: baseline;
+}

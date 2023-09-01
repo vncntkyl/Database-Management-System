@@ -1,0 +1,119 @@
+@import url(main.css);
+header, footer{
+    background-color: var(--clr-black);
+    color: var(--clr-white-dark);
+}
+header{
+    height: var(--height-header);
+    font-family: var(--font-secondary);
+    align-items: center;
+    padding: 0 20rem;
+    border-bottom: 5px solid var(--clr-main);
+    justify-content: space-between;
+}
+header .logo{
+    gap: 1rem;
+    font-size: 2rem;
+    align-items: center;
+}
+header .logo i{
+    color: var(--clr-main);
+}
+header .user{
+    position: relative;
+    font-size: 3rem;
+    align-items: center;
+    gap: 1rem;
+}
+.user label span, .user a{
+    font-size: 1.2rem;
+}
+.user a{
+    color: var(--clr-white-dark);
+    text-decoration: none;
+    cursor: pointer;
+}
+.user label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.user i{
+    cursor: pointer;
+}
+.user-dropdown{
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 1.2rem;
+    width: 250px;
+    top: 100%;
+    right: 0;
+    color: var(--clr-white);
+    background-color: var(--clr-black);
+    border-bottom: 5px solid var(--clr-main);
+    border-radius: 0 0 10px 10px;
+    transform-origin: top;
+    transform: scale(1, 0);
+    transition: transform 200ms ease-in-out;
+    pointer-events: all;
+    z-index: 10;
+}
+#icon{
+    display: none;
+}
+.user-dropdown *{
+    padding: 10px;
+}
+.user-dropdown a{
+    color: var(--clr-white);
+}
+.user-dropdown a:hover, .user i:hover, .user label:hover, .user a:hover{
+    color: var(--clr-main);
+}
+#icon:hover ~ .user-dropdown,
+#icon:checked ~ .user-dropdown{
+    transform: scale(1,1);
+}
+footer{
+    height: var(--height-footer);
+    border-top: 5px solid var(--clr-main);
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-black-lighter);
+    gap: 3rem;
+}
+footer .about{
+    width: 700px;
+}
+footer .about span:first-child{
+    font-weight: 600;
+    border-bottom: 2px solid var(--clr-main-darker);
+}
+footer .contact{
+    align-items: center;
+    justify-content: center;
+}
+footer .contact .social-links ul{
+    list-style-type: none;
+    gap: 1rem;
+}
+.facebook, .twitter, .github, .linkedin{
+    color: var(--clr-black-lighter);
+    transition: color 300ms ease-in-out;
+}
+.facebook:hover{
+    color: rgb(28, 40, 151);
+}
+.twitter:hover{
+    color: rgb(107, 185, 221);
+}
+.github:hover{
+    color: rgb(55, 179, 51);
+}
+.linkedin:hover{
+    color:  rgb(14, 118, 168);
+}
